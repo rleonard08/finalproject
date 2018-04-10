@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    background: #b2bdcb;
+}
+
+/* main page class */
+.main {
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 2px dashed grey;
+}
+
+/* HOMEPAGE */
+/*main text */
+.maintext {
+    font-family: futura;
+    font-size: 24px;
+}
+
+.sectext {
+    font-size: 18px;
+    font-family: futura;
+}
+/* signature field */
+#signature {
+    border: 1px dashed grey;
+}
+
+/* homepage image */
+.hpimage {
+    position: relative;
+    opacity: 0.5;
+}
+
+.userinfo {
+    /* margin-left: 10px; */
+}
+/* name fields */
+.input {
+    font-family: futura;
+    font-size: 16px;
+    position: relative;
+}
+
+#sign {
+    background-color: ;
+    border: 0.5px solid #f0f5f5;
+}
+/* submit button */
+.button {
+    border: 0.5px solid #f0f5f5;
+    font-family: futura;
+    font-size: 16px;
+}
+
+.errormsg {
+    color: red;
+}
+
+/* THANK YOU PAGE */
+
+/* VIEW SIGNATURES PAGE */

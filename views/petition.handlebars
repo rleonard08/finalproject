@@ -1,0 +1,31 @@
+<!doctype html>
+<link rel="stylesheet" href="/stylesheet.css">
+
+
+<body class="main">
+    <div>
+        <img class="hpimage" src="/polar.jpg" width="1000">
+        <h1 class="maintext">CLIMATE CHANGE IS KILLING OUR POLAR BEARS!<br></h1>
+        <h2 class="sectext">
+            For any species habitat is key to survival and Polar Bears are losing
+            theirs due to Climate Change, which is causing sea ice to melt in the artic.<br>
+            Please help by siging our petition to bring awareness to this issue and
+            helping to protect our Polar Bears!</h2>
+    </div>
+    <div class="errormsg">
+        {{#err}}
+        Uh oh!  Something went wrong, please check your deets to proceed!
+        {{/err}}
+    </div>
+    <form class="userinfo" method="POST">
+        <label><br> First Name <br><input class="input" type="text" name="first"></input><br><br></label>
+        <label> Last Name <br><input class="input" type="text" name="last"></input><br><br></label>
+        <label><br> Please Confirm Your Participation By Signing Below <br><input class="input" id="field" name="signature" type="hidden"></input>
+        <canvas id="sign" width="655" height="225"></canvas><br></label>
+        <button class="button" type="submit" name="button">SUBMIT</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/canvas.js"></script>
+
+</body>
