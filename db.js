@@ -12,5 +12,10 @@ function getSignatures() {
     return db.query("SELECT * FROM signatures");
 }
 
+function remUsers(id) {
+    return db.query("SELECT signature FROM signatures WHERE id = $1", [id]);
+}
+
 exports.getData = getData;
 exports.getSignatures = getSignatures;
+exports.remUsers = remUsers;

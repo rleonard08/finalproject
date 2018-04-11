@@ -42,13 +42,21 @@ app.post("/petition", function(req, res) {
 });
 
 app.get("/thankyou", function(req, res) {
+    console.log(req.session.signatureId);
+    db.remUsers(req.session.signatureId).then(function(results) {
+        console.log(results);
+        res.render("thankyou", {
+            signature: results.rows[0].signature
+        });
+    });
     console.log("thanks for your sig");
-    res.render("thankyou", {});
 });
 
 app.get("/viewsigs", function(req, res) {
     console.log("view all supporters");
-    db.getSignatures().then(function(result) {
+    console.log(db.getSignatures + "");
+    db.getSignatures().then(function(results) {
+        console.log(results);
         res.render("viewsigs", {
             sigsList: results.rows
         });

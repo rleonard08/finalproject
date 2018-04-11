@@ -2,11 +2,15 @@
 <!doctype html>
 <link rel="stylesheet" href="/stylesheet.css">
 
+
 <body class="main">
     <div class="hpimage">
         <img src="/polar.jpg" width="1000">
     </div>
     <h1>Here's Our List Other Supporters</h1>
+    {{#sigsList}}
+    {{first}} {{last}}<br>
+    {{/sigsList}}
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
