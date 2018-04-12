@@ -7,14 +7,21 @@
         <img class="hpimage" src="/polar.jpg" width="1000">
         <h1 class="maintext">BLAH<br></h1>
         <h2 class="sectext">BLAH</h2>
+
+        <!-- <div class="errormsg">
+            {{#err}}
+            Uh oh!  Something went wrong, please check your deets to proceed!
+            {{/err}}
+        </div> -->
     </div>
     <form class="create-account" method="POST">
+        <label><br> Fill Out The Required Fields Below to Register:<input class="input" id="field" name="signature" type="hidden"></input><br>
         <label><br> First Name <br><input class="input" type="text" name="first"></input><br><br></label>
         <label> Last Name <br><input class="input" type="text" name="last"></input><br><br></label>
         <label> Email Address <br><input class="input" type="text" name="email"></input><br><br></label>
         <label> Password <br><input class="input" type="text" name="passwore"></input><br><br></label>
-        <label><br> Please Create Your Account <br><input class="input" id="field" name="signature" type="hidden"></input>
-        <button class="button" type="click" name="signup">SIGN ME UP</button>
+        <button class="button" type="click" name="signup">SIGN ME UP</button><br><br>
+        <a class="login" href="/viewsigs">Aleready A Member? Please Sign In Here</a>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

@@ -19,6 +19,16 @@ app.use(
     })
 );
 
+app.get("/registration", function(req, res) {
+    console.log("registration page working");
+    res.render("registration", {});
+});
+
+app.post("/registration", function(req, res) {
+    console.log("User Registration Data");
+    let first = req.body.first;
+});
+
 app.get("/petition", function(req, res) {
     console.log("im working");
     res.render("petition", {});
@@ -67,6 +77,9 @@ app.get("/viewsigs", function(req, res) {
 //     people [ { result.rows }]
 // }
 
-app.listen(8080, () => console.log(`I'm listening.`));
+app.listen(process.env.PORT || 8080),
+    () => {
+        console.log(`I'm Listening`);
+    };
 
 //user body parser
