@@ -4,11 +4,24 @@ const db = spicedPg(
         "postgres:postgres:postgres@localhost:5432/petition"
 );
 
-function getData(first, last, signature) {
+function getData(first, last, signature, id) {
     return db.query(
-        "INSERT INTO signatures(first, last, signature) VALUES ($1, $2, $3) RETURNING id",
-        [first, last, signature]
+        "INSERT INTO signatures(first, last, signature, user_id) VALUES ($1, $2, $3, $4) RETURNING id",
+        [first, last, signature, id]
     );
+}
+
+//User City, Age and Homepage//
+function userProfile(age, city, homepage, user_id) {
+    return db.query(
+        "INSERT INTO usersinfo(age, city, homepage, user_id) VALUES ($1, $2, $3, $4)",
+        [age, city, homepage, user_id]
+    );
+}
+
+//Returning Users Logging In//
+function returnUsr(email) {
+    return db.query("SELECT * FROM users WHERE email = $1", [email]);
 }
 
 //Collecting Users Signatures//
@@ -33,3 +46,5 @@ exports.getData = getData;
 exports.getSignatures = getSignatures;
 exports.remUsers = remUsers;
 exports.signUps = signUps;
+exports.returnUsr = returnUsr;
+exports.userProfile = userProfile;

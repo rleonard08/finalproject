@@ -2,27 +2,33 @@
 <link rel="stylesheet" href="/stylesheet.css">
 
 
-<body class="main">
+<body>
+    <div class="main">
     <div>
-        <img class="hpimage" src="/polar.jpg" width="1000">
-        <h1 class="maintext">BLAH<br></h1>
-        <h2 class="sectext">BLAH</h2>
-
-        <!-- <div class="errormsg">
+        <img class="hpimage" src="/polarreg.jpg" width="1000">
+        <h1 class="maintext">HELP!  Our Polar Bears Need You!<br></h1>
+        <h2 class="maintext" id="sectext">Habitat is key to survival and our Polar Bears
+        are losing theirs due to Climate Change,<br> which is making sea ice melt
+        into the artic!<br><br>
+        Please help our to bring awareness to this issue and
+        helping protect<br> our Polar Bears by signing our petition!<br></h2>
+        <div class="errormsg">
             {{#err}}
-            Uh oh!  Something went wrong, please check your deets to proceed!
+            Uh oh!  Something's missing.  All fields below are required!
             {{/err}}
-        </div> -->
+        </div>
     </div>
-    <form class="create-account" method="POST">
-        <label><br> Fill Out The Required Fields Below to Register:<input class="input" id="field" name="signature" type="hidden"></input><br>
-        <label><br> First Name <br><input class="input" type="text" name="first"></input><br><br></label>
-        <label> Last Name <br><input class="input" type="text" name="last"></input><br><br></label>
-        <label> Email Address <br><input class="input" type="text" name="email"></input><br><br></label>
-        <label> Password <br><input class="input" type="password" name="password"></input><br><br></label>
-        <button class="button" type="click" name="signup">SIGN ME UP</button><br><br>
-        <a class="login" href="/viewsigs">Aleready A Member? Please Sign In Here</a>
+    <form class="maintext" id="sectext" method="POST">
+        <label><br> Register By Filling Out The Below Fields:<input class="input" id="field" name="signature" type="hidden"></input><br>
+        <label><br> First Name: <br><input class="input" type="text" name="first"></input><br></label>
+        <label> Last Name: <br><input class="input" type="text" name="last"></input><br></label>
+        <label> Email Address: <br><input class="input" type="text" name="email"></input><br></label>
+        <label> Password: <br><input class="input" type="password" name="password"></input><br><br></label>
+        <button class="button" type="click" name="signup">SIGN UP</button><br>
+        <p class="login">Aleready A Member?</p>
+        <a class="login" href="login">Sign In Here</a><br><br>
     </form>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 

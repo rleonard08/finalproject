@@ -36,6 +36,22 @@ function hashPassword(plainTextPassword) {
     });
 }
 
+function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
+    return new Promise(function(resolve, reject) {
+        bcrypt.compare(
+            textEnteredInLoginForm,
+            hashedPasswordFromDatabase,
+            function(err, doesMatch) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(doesMatch);
+                }
+            }
+        );
+    });
+}
+
 //REGISTRATION PAGE//
 app.get("/registration", function(req, res) {
     console.log("registration page working");
@@ -43,7 +59,7 @@ app.get("/registration", function(req, res) {
 });
 
 app.post("/registration", function(req, res) {
-    console.log("Registering User");
+    console.log("User Has Registered");
     let first = req.body.first;
     let last = req.body.last;
     let email = req.body.email;
@@ -63,31 +79,94 @@ app.post("/registration", function(req, res) {
                 };
                 res.redirect("/petition");
             });
+    } else {
+        res.render("registration", { err: true });
     }
 });
 
+//More User Infomration//
+
+app.get("/moreinfo", function(req, res) {
+    console.log("Collecting Additional User Details");
+    res.render("moreinfo");
+});
+
+app.post("/moreinfo", function(req, res) {
+    console.log("Age, City, Homepage Details");
+    let age = req.body.age;
+    let city = req.body.city;
+    let homepage = req.body.homepage;
+    let user = req.session.user.id;
+    console.log(req.body);
+    if (age || city || homepage) {
+        db.userProfile(age, city, homepage, user).then(function(results) {
+            res.redirect("/petition");
+        });
+    }
+});
+
+//Existing Users Login//
+app.get("/login", function(req, res) {
+    console.log("Login Page Loaded");
+    res.render("login", {});
+});
+
+app.post("/login", function(req, res) {
+    console.log("Welcome Back");
+    let email = req.body.email;
+    let password = req.body.password;
+    console.log(req.body);
+    if (email && password) {
+        db.returnUsr(email).then(function(results) {
+            console.log(req.body.password, results.rows[0].password);
+            checkPassword(req.body.password, results.rows[0].password).then(
+                function(matches) {
+                    if (matches) {
+                        req.session.user = {
+                            id: results.rows[0].id,
+                            first: req.body.first,
+                            last: req.body.last
+                        };
+                        res.redirect("/viewsigs");
+                    } else {
+                        res.render("login", { err: true });
+                    }
+                }
+            );
+        });
+    }
+});
+
+// if matches true then run req.session.user if not send error
+//Signature Page//
 app.get("/petition", function(req, res) {
-    console.log("im working");
+    console.log("Petition Page Loaded");
     res.render("petition", {});
 });
 
 app.post("/petition", function(req, res) {
     console.log("Getting User Data");
-    let first = req.body.first;
-    let last = req.body.last;
+    let first = req.session.user.first;
+    let last = req.session.user.last;
     let signature = req.body.signature;
-    console.log();
+    console.log(req.body);
     if (first && last && signature) {
-        db.getData(first, last, signature).then(function(results) {
-            console.log(results);
-            req.session.signatureId = results.rows[0].id;
-            res.redirect("/thankyou");
-        });
+        db
+            .getData(first, last, signature, req.session.user.id)
+            .then(function(results) {
+                console.log(results);
+                req.session.signatureId = results.rows[0].id;
+                res.redirect("/thankyou");
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
     } else {
         res.render("petition", { err: true });
     }
 });
 
+// Thanks for Signing & View Your Signature//
 app.get("/thankyou", function(req, res) {
     console.log(req.session.signatureId);
     db.remUsers(req.session.signatureId).then(function(results) {
@@ -99,6 +178,7 @@ app.get("/thankyou", function(req, res) {
     console.log("thanks for your sig");
 });
 
+//View List of People Who've Signed//
 app.get("/viewsigs", function(req, res) {
     console.log("view all supporters");
     console.log(db.getSignatures + "");

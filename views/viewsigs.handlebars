@@ -3,14 +3,19 @@
 <link rel="stylesheet" href="/stylesheet.css">
 
 
-<body class="main">
-    <div class="hpimage">
-        <img src="/polar.jpg" width="1000">
+<body>
+    <div class="main">
+    <div class="image">
+        <img src="/polarsig.gif" width="1000">
     </div>
-    <h1>Here's Our List Other Supporters</h1>
+    <h1 class="maintext">OUR LIST OF SUPPORTERS!</h1>
+    <h2 class="maintext" id="sectext">Because of YOU, we can get back to doing important things!</h2>
+    <div class="maintext" id="sectext">
     {{#sigsList}}
     {{first}} {{last}}<br>
     {{/sigsList}}
+</div>
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
