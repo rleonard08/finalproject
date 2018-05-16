@@ -194,6 +194,25 @@ app.get("/viewsigs", function(req, res) {
 //     people [ { result.rows }]
 // }
 
+// NEW WEBSITE - FINAL PROJECT //
+// MAIN LANDING PAGE //
+app.get("/home", function(req, res) {
+    console.log("Events Page Loaded");
+    res.render("home", {});
+});
+
+// Partners Page //
+app.get("/partners", function(req, res) {
+    console.log("Partners Page Loaded");
+    res.render("partners", {});
+});
+
+// Events Page //
+app.get("/events", function(req, res) {
+    console.log("Events Page Loaded");
+    res.render("events", {});
+});
+
 app.listen(process.env.PORT || 8080, () => {
     console.log(`I'm Listening`);
 });
