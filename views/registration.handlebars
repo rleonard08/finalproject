@@ -3,31 +3,55 @@
 
 
 <body>
+    <div class="container" style="visibility: visible;">
+        <nav class="topnav">
+            <img class="logo" src="/logo.jpg"/>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/uberblick">Überblick</a></li>
+                <li><a href="/termine">Termine</a></li>
+                <li><a class="active" href="/partners">Partners</a></li>
+                <li><a href="/service">Service</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <div class="main">
     <div>
-        <img class="hpimage" src="/polarreg.jpg" width="1000">
-        <h1 class="maintext">HELP!  Our Polar Bears Need You!<br></h1>
-        <h2 class="maintext" id="sectext">Habitat is key to survival and our Polar Bears
-        are losing theirs due to Climate Change,<br> which is making sea ice melt
-        into the artic!<br><br>
-        Please help our to bring awareness to this issue and
-        helping protect<br> our Polar Bears by signing our petition!<br></h2>
+        <img class="hpimage" src="" width="1000">
+        <h1 class="maintext">Anmeldeformular Teilnahmedaten<br></h1>
+        <h2 class="maintext" id="sectext"></h2>
         <div class="errormsg">
             {{#err}}
-            Uh oh!  Something's missing.  All fields below are required!
+            All fields below are required
             {{/err}}
         </div>
     </div>
+    <div>
     <form class="maintext" id="sectext" method="POST">
-        <label><br> Register By Filling Out The Below Fields:<input class="input" id="field" name="signature" type="hidden"></input><br>
-        <label><br> First Name: <br><input class="input" type="text" name="first"></input><br></label>
-        <label> Last Name: <br><input class="input" type="text" name="last"></input><br></label>
-        <label> Email Address: <br><input class="input" type="text" name="email"></input><br></label>
-        <label> Password: <br><input class="input" type="password" name="password"></input><br><br></label>
-        <button class="button" type="click" name="signup">SIGN UP</button><br>
-        <p class="login">Aleready A Member?</p>
-        <a class="login" href="login">Sign In Here</a><br><br>
+        <h2><br>Angaben zur Einrichtung</h2><br>
+        <!-- <label><br>Register By Filling Out The Below Fields:<input class="input" id="field" name="headline" type="hidden"></label><br><br> -->
+        <label>Name der Einrichtung:<input class="input" type="text" name="company"></input></label>
+        <label>Straße:<input class="input" type="text" name="straße"></input></label>
+        <label>PLZ:<input class="input" type="text" name="plz"></input></label>
+        <label>Ort:<input class="input" type="text" name="ort"></input></label>
+        <h2><br>Angaben zur Person</h2><br>
+        <label>Titel:<input class="input" type="text" name="titel"></input></label>
+        <label>Vorname*:<input class="input" type="text" name="vorname"></input></label>
+        <label>Name*:<input class="input" type="text" name="name"></input></label>
+        <label>Telefon:<input class="input" type="text" name="telefon"></input></label>
+        <label>E-Mail:<input class="input" type="text" name="email"></input></label><br>
+        <button class="button" type="click" name="register">Registrieren</button><br><br><br>
     </form>
+</div>
+    <footer class="footer">
+        <ul>
+            <li><a href="/startseite">Startseite</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+            <li><a href="/impressum">Impressum</a></li>
+            <li><a href="/drucken">Drucken</a></li>
+        </ul>
+    </footer>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

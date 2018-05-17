@@ -61,7 +61,7 @@ nav {
 
 /* MAIN LANDING PAGE */
 .hpimg {
-    background: linear-gradient(#407eb540, #a7a7a700), url("/partners3.jpg");
+    background: linear-gradient(#407eb540, #a7a7a700), url("/partners5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,20 +72,15 @@ nav {
 
 .hpimgtext {
     margin-left: 60px;
-    background: webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0%, rgba(192, 192, 192, 1)),
-        color-stop(99%, rgba(255, 255, 255, 1)),
-        color-stop(100%, rgba(128, 128, 128, 1))
-    );
 }
 
 .hptitle {
     position: absolute;
     top: 30%;
     font-size: 28px;
+    font-family: Times;
+    color: #2c2c2c;
+    text-shadow: 0.5px 0.5px #ffffff;
 }
 
 .hpdesc {
@@ -93,15 +88,188 @@ nav {
     top: 37%;
     font-size: 16px;
     line-height: 22px;
+    font-family: Times;
+    color: #2c2c2c;
+    /* text-shadow: 0.5px 0.5px #ffffff; */
 }
 
 .hpbtn {
     position: absolute;
     top: 52%;
     font-size: 16px;
+    color: white;
+    background-color: #2c2c2c;
+    border-width: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 25px;
+    padding-top: 7px;
+    letter-spacing: 0.15px;
+    font-family: Times;
+    border-radius: 5px;
+}
+
+/* ABOUT COMPANY TEXT UNDER HP IMAGE */
+.aboutcompany {
+    text-align: center;
+    font-family: Times;
+    color: #2c2c2c;
+}
+/* .aboutus {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 28px;
+} */
+
+.abouttitle {
+    top: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.aboutdesc {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* 3 FLEXBOXES ON HOMEPAGE */
+.flex-grid-thirds {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10%;
+}
+
+.flex-grid-thirds .col1 {
+    width: 32%;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f6f6f7;
+    border: 0.25px solid #e5e5e5;
+}
+
+.col1 h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times;
+}
+
+.col1 p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+
+.col1 a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Times;
+}
+
+.flex-grid-thirds .col2 {
+    width: 32%;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f6f6f7;
+    border: 0.25px solid #e5e5e5;
+}
+
+.col2 h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times;
+}
+
+.col2 p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+
+.col2 a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Times;
+}
+
+.flex-grid-thirds .col3 {
+    width: 32%;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #f6f6f7;
+    border: 0.25px solid #e5e5e5;
+}
+
+.col3 h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times;
+}
+
+.col3 p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+
+.col3 a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Times;
 }
 
 /* PARTNERS PAGE */
+
+.flex-container {
+    display: flex;
+}
+.flex-container.vertical {
+    align-items: center;
+}
+
+.clients {
+    min-height: 100%;
+    padding-left: 10%;
+    padding-right: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    line-height: 1.3;
+}
 
 /* .mainimage {
     left: 0;
@@ -150,12 +318,56 @@ p {
     border: 0.25px solid #e5e5e5;
 }
 
+.eventssection {
+    text-align: center;
+    font-family: Times;
+    color: #2c2c2c;
+    line-height: 30px;
+}
+
+.eventtitle {
+    top: 30px;
+    bottom: 30px;
+}
+
+.eventdesc {
+    top: 37%;
+}
+
+.registrationbtn {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    background-color: #2c2c2c;
+    border-width: 5px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 30px;
+    bottom: 30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    letter-spacing: 0.15px;
+    font-family: Times;
+}
+
 .eventlocation {
-    position: absolute;
+    position: relative;
     left: 0;
     margin-bottom: 5%;
-    margin-top: 77%;
+    margin-top: 30px;
     min-width: 100%;
+    top: 30px;
+}
+
+/* REGISTRATION PAGE */
+.maintext {
+    margin-left: 30px;
+}
+
+.input {
+    margin-left: 40px;
+    display: block;
 }
 
 /* FLEXBOX FOR 9 PARTNERS */
@@ -246,16 +458,105 @@ h3 {
     font-size: 15px;
 }
 
-/* FOOTER NAVIGATION */
+/* LOCATION MAP */
 
+/* CONTACT */
+
+.contacttitle {
+    text-align: center;
+    padding-top: 30px;
+}
+.contactdetails {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10%;
+    margin: 20px;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.contact1 {
+    background-color: #f6f6f7;
+    border: 0.25px solid #e5e5e5;
+    padding: 20px;
+    width: 400px;
+}
+
+.contact1 h3 {
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times;
+}
+
+.contact1 h4 {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+.contact1 p {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+.contact1 a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Times;
+}
+
+.contact2 {
+    background-color: #f6f6f7;
+    border: 0.25px solid #e5e5e5;
+    padding: 20px;
+    width: 400px;
+}
+
+.contact2 h3 {
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times;
+}
+
+.contact2 h4 {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+.contact2 p {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Times;
+}
+.contact2 a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Times;
+}
+
+/* FOOTER NAVIGATION */
 footer {
+    /* position: fixed; */
     background-color: #ffffff;
     width: 100%;
     height: 60px;
     border: 0.25px solid #e5e5e5;
     float: left;
     bottom: 0;
-    position: absolute;
 }
 
 .footer ul {

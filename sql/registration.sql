@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS registration;
+CREATE TABLE registration (
+    id SERIAL PRIMARY KEY,
+    company VARCHAR(300) NOT NULL,
+    straße VARCHAR(300) NOT NULL,
+    plz VARCHAR(300) NOT NULL,
+    ort VARCHAR(300) NOT NULL,
+    titel VARCHAR(300) NOT NULL,
+    vorname VARCHAR(300) NOT NULL,
+    name VARCHAR(300) NOT NULL,
+    telefon INTEGER NOT NULL,
+    email VARCHAR(300) NOT NULL
+);
