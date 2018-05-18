@@ -263,10 +263,10 @@ app.post("/registration", function(req, res) {
 });
 
 // Partners Page //
-app.get("/partners", function(req, res) {
-    console.log("Partners Page Loaded");
-    res.render("partners", {});
-});
+// app.get("/partners", function(req, res) {
+//     console.log("Partners Page Loaded");
+//     res.render("partners", {});
+// });
 
 // THANK YOU PAGE //
 app.get("/thankyou", function(req, res) {

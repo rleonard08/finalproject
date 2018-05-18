@@ -59,6 +59,23 @@ nav {
     text-decoration: underline;
 }
 
+/* Anchor Linking */
+.termine-section {
+    margin-top: 10px;
+}
+
+.kontakt-section {
+    top: 5px;
+}
+
+.partner-section {
+    top: 5px;
+}
+
+.uberblick-section {
+    top: 5px;
+}
+
 /* MAIN LANDING PAGE */
 .hpimg {
     background: linear-gradient(#407eb540, #a7a7a700), url("/partners5.jpg");
@@ -123,7 +140,7 @@ nav {
 
 .abouttitle {
     top: 30px;
-    margin-top: 10px;
+    padding-top: 4%;
     margin-bottom: 5px;
     font-size: 28px;
 }
@@ -140,6 +157,7 @@ nav {
     padding: 20px;
     margin-bottom: 50px;
     border-radius: 10%;
+    padding-bottom: 5%;
 }
 
 .flex-grid-thirds .col1 {
@@ -361,13 +379,93 @@ p {
 }
 
 /* REGISTRATION PAGE */
+
+.registrationform {
+    /* display: flex;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 10%;
+    margin: 20px;
+    justify-content: center;
+    justify-content: space-around; */
+}
 .maintext {
+    margin-left: 30px;
+}
+
+.maintext2 {
     margin-left: 30px;
 }
 
 .input {
     margin-left: 40px;
     display: block;
+}
+
+.errormsg {
+    color: red;
+    padding: 15px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.button {
+    font-size: 18px;
+    color: white;
+    background-color: #2c2c2c;
+    border-width: 5px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 30px;
+    bottom: 30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    letter-spacing: 0.15px;
+    font-family: Times;
+}
+
+/* Thank You Page */
+
+.thankyouform {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10%;
+    margin: 20px;
+}
+
+.thankyouheader {
+    top: 30px;
+    padding-top: 4%;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.thankyoudesc {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.thankyoubtn {
+    font-size: 20px;
+    color: white;
+    background-color: #2c2c2c;
+    border-width: 5px;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 30px;
+    bottom: 30px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    letter-spacing: 0.15px;
+    font-family: Times;
+}
+
+.footerthankyou {
+    margin-bottom: -100%;
 }
 
 /* FLEXBOX FOR 9 PARTNERS */
@@ -456,6 +554,56 @@ div.desc {
 
 h3 {
     font-size: 15px;
+}
+
+/* PARTNERS ICONS */
+
+.partnertitle {
+    text-align: center;
+    font-family: Times;
+    color: #2c2c2c;
+    top: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.partnerdesc {
+    text-align: center;
+    font-family: Times;
+    color: #2c2c2c;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.partnerlogos-row1 {
+    display: flex;
+    padding-top: 3%;
+    padding: 20px;
+    padding-bottom: 5%;
+    justify-content: center;
+    justify-content: space-around;
+}
+.partnerlogos-row2 {
+    margin-top: 3%;
+    display: flex;
+    /* padding: 30px; */
+    padding-bottom: 10%;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.partlogo {
+    top: 0;
+    margin-top: 5%;
+    position: relative;
+    background-color: #ffffff;
+    height: 125px;
+    margin-left: 40px;
+    border: 2px solid #e5e5e5;
+    width: 70%;
+    height: 100%;
 }
 
 /* LOCATION MAP */
